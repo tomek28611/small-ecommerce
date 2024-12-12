@@ -35,8 +35,7 @@ const ProductItem = ({ product }) => {
               href={`/product/${product._id}`}
               className="hover:text-blue-600"
             >
-              {product.title} - 
-              {product.model}
+              {product.name} 
             </Link>
             <div className="flex flex-wrap items-center space-x-2 mb-2">
               <div className="ratings">
