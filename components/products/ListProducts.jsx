@@ -2,7 +2,7 @@
 
 import React from "react";
 import Filters from "../layouts/Filters";
-
+import CustomPagination from "../layouts/CustomPagination";
 import ProductItem from "./ProductItem";
 
 const ListProducts = ({ data }) => {
@@ -17,6 +17,12 @@ const ListProducts = ({ data }) => {
             {data?.products?.map((product) => (
               <ProductItem key={product?._id} product={product} />
             ))}
+
+            <CustomPagination
+              resPerPage={data?.resPerPage}
+              productsCount={data?.filteredProductsCount}
+            />
+
           </main>
         </div>
       </div>
